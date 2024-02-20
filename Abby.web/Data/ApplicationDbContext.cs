@@ -1,0 +1,11 @@
+﻿using Abby.web.Models;
+using Microsoft.EntityFrameworkCore;
+
+namespace Abby.web.Data
+{
+    public class ApplicationDbContext : DbContext
+    {
+        public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options) : base(options) { }
+        public DbSet <Category> Categories { get; set; }
+    }
+}
